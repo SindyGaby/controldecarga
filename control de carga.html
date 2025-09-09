@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de Carga de Producto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <p>Fecha actual: <span id="fechaActual"></span></p>
+</head>
+<body>
+  <h2><Font color="Blue">Control de Carga de Producto</h2></font>
+  <font color="Teal">
+  <h2>Hecho por Milton¨Labs</h2></font><font color="teal"> 2025 </font>
+
+  <table id="tablaProductos">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Carga Día Anterior</th>
+        <th>Carga Día Actual</th>
+        <th>Total Cargado</th>
+        <th>Ventas del Día</th>
+        <th>Stock Restante</th>
+        <th>Ingreso Diario (Q)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-precio="6.00"><td>Fardo de Agua</td><td><input type="number" class="anterior" /></td><td><input type="number" class="actual" /></td><td class="total"></td><td><input type="number" class="ventas" /></td><td class="restante"></td><td class="ingreso"></td></tr>
+      <tr data-precio="5.50"><td>Fardo de Agua Mayorista</td><td><input type="number" class="anterior" /></td><td><input type="number" class="actual" /></td><td class="total"></td><td><input type="number" class="ventas" /></td><td class="restante"></td><td class="ingreso"></td></tr>
+      <tr data-precio="22.00"><td>Buti</td><td><input type="number" class="anterior" /></td><td><input type="number" class="actual" /></td><td class="total"></td><td><input type="number" class="ventas" /></td><td class="restante"></td><td class="ingreso"></td></tr>
+      <tr data-precio="27.00"><td>Botella</td><td><input type="number" class="anterior" /></td><td><input type="number" class="actual" /></td><td class="total"></td><td><input type="number" class="ventas" /></td><td class="restante"></td><td class="ingreso"></td></tr>
+      <tr data-precio="11.00"><td>Garrafón</td><td><input type="number" class="anterior" /></td><td><input type="number" class="actual" /></td><td class="total"></td><td><input type="number" class="ventas" /></td><td class="restante"></td><td class="ingreso"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Ingreso de Garrafones</h3>
+    <label>Garrafones Cargados:</label><input type="number" /><br /><br />
+    <label>Garrafones Prestados:</label><input type="number" /><br /><br />
+    <label>Garrafones Recuperados:</label><input type="number" />
+  </div>
+
+  <div class="section notas">
+    <h3>Notas</h3>
+    <textarea placeholder="Escribe tus notas aquí..."></textarea>
+  </div>
+
+  <div class="botones">
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="editar()">Editar Día</button>
+    <button onclick="descargarExcel()">Descargar Excel</button>
+    <button onclick="descargarPDF()">Descargar PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
